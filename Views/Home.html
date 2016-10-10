@@ -1,3 +1,44 @@
 ﻿<div class="col-md-12">
     <h1 ng-bind="title"></h1>
 </div>
+<div class="row">
+    <div class="col-md-12">
+        <table class="table">
+            <tr>
+                <th>Notes</th>
+                <th>Todo</th>
+                <th>WIP</th>
+                <th>Done</th>
+            </tr>
+            <tr>
+                <td class="col-md-1">
+                    <form ng-submit="addNote()">
+                        <div class="form-group">
+                            <label for="note-body">Note body...</label>
+                            <input type="text"
+                                   class="form-control"
+                                   ng-model="newNote.body"
+                                   placeholder="Note body..." />
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            Add note
+                        </button>
+                    </form>
+                    
+                    <!--<draggable id="1" body="'My note 1'"></draggable>
+                    <draggable id="2" body="'My note 1'"></draggable>
+                    <draggable id="3" body="'My note 1'"></draggable>-->
+                </td>
+                <td class="col-md-3">
+                    <droppable id="1"></droppable>
+                </td>
+                <td class="col-md-3">
+                    <droppable id="2"></droppable>
+                </td>
+                <td class="col-md-3">
+                    <droppable id="3"></droppable>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
